@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+  }
+  header{
+    /*set background color to black*/
+    background-color: #0B1C51;
+    /*add 40px of space under the header so that
+    the main content isn't so close to the nav */
+    margin-bottom: 40px;
+  }
+  header h1{
+    /*set tect color to white*/
+    color: #fff;
+    /*center the text*/
+    text-align: center;
+    /*set font size to 52px for mobile*/
+    font-size: 52px;
+    /*removed the default margins and spacing around 
+    the h1 element */
+    margin: 0;
+    /*pushes the text down 20px from the top the page*/
+    padding-top: 20px;
+  }
+  header nav{
+    /*changes the display property from its default*/
+    display: flex;
+    /*centers an element defined as `display:flex`*/
+    justify-content: center;
+  }
+  header nav ul{
+    /*changes the display property from its default*/
+    display: flex;
+    /*no need to define the direction, the default is row*/
+    /*remove the default padding on the left of the ul*/
+    padding-left: 0;
+    /*removed the bullet points from the list items*/
+    list-style: none;
+  }
+  header nav ul li a {
+    /*the link color is white*/
+    color: #fff;
+    font-family: Montserrat;
+    /*remove the underline of the links*/
+    text-decoration: none;
+    /*applies 20px of margin to the right of each element
+    creating a visual gap between the nav links*/
+    margin: 0 20px 0 0;
+  }
+  header nav ul li:last-child a {
+    /*removed the margin to the right of the last anchor tag
+    so that the nav appears centered*/
+    margin-right: 0;
+  }
+                        /* desktop view */
+  /*when a web browser is larger than 600px, apply these rules*/
+  
+  @media all and (min-width: 600px){
+  
+  header{
+    /*changes the default setting from block to flex*/
+    display: flex;
+    /*pushes the items (title and nav) to the far sides of
+    the browser with space between them*/
+    justify-content: space-between;
+    /*add 0px padding top and bottom and 30px left and right*/
+    padding: 0 30px;
+  }
+  header h1 {
+    /*sets 14px of margin above and below the h1 and 
+    0px to the left and right*/
+    margin: 14px 0;
+    /*removes padding above h1*/
+    padding-top: 0;
+    /*set font size to 48px for desktop*/
+    font-size: 48px;
+  }
+  
+  header nav {
+    /*
+        Pushes the navigation container down by 8 pixels to make it
+        present a little better visually within the space.
+      */
+      margin-top: 8px;
+  }
+  /* Users cannot hover on mobile devices, so that is why you
+       implement this behavior only for larger screens. */
+       header nav ul li a:hover {
+        /* Targets the change when a user holds the pointer over the anchor tag 
+           (link) within the list items within the unordered list that 
+           is within the navigation that is within the header. */
+        color: #bdbdbd;
+      }
+  
+  }
